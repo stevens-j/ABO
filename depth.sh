@@ -1,12 +1,16 @@
 #! /usr/bin/env bash
 # depth.sh
 
+# Process all cram files in a directory
+# Determine ABO gene sequence depth with samtools depth command
+# samtools depth -a -r chr9:133255176-133385146 [cram] -o [_depth.txt]
+
 # path to cram files
 cramPath="/Users/jonathan_stevens/ABO/1000G_data/cram/"
 # cram file extension
 cramSuffix=".extract_for_bloodantigens-full_gene_master.cram"
 
-# path to output
+# path to output directory
 depthOutPath="/Users/jonathan_stevens/ABO/1000G_data/depth/"
 # output file extension
 outSuffix="_depth.txt"
@@ -25,9 +29,10 @@ function depth {
         samtools depth -a -r chr9:133255176-133385146 \
         $cramPath$sampleName$cramSuffix \
         -o $depthOutPath$sampleName$outSuffix
+        echo $sampleName$outSuffix
     done
 }
 
-depth 1>depth.log 2>depth.err &
+depth 1>depth.out 2>depth.err &
 
 
