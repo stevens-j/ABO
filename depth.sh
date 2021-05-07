@@ -3,10 +3,12 @@
 
 # path to cram files
 cramPath="/Users/jonathan_stevens/ABO/1000G_data/cram/"
+# cram file extension
 cramSuffix=".extract_for_bloodantigens-full_gene_master.cram"
 
 # path to output
 depthOutPath="/Users/jonathan_stevens/ABO/1000G_data/depth/"
+# output file extension
 outSuffix="_depth.txt"
 
 # create output directory
