@@ -3,7 +3,7 @@
 
 # Process all cram files in a directory
 # Determine ABO gene sequence depth with samtools depth command
-# samtools depth -a -r chr9:133255176-133385146 [cram] -o [_depth.txt]
+# samtools depth -a -r chr9:133255176-133385146 [*.cram] -o [*.txt]
 
 # path to cram files
 cramPath="/Users/jonathan_stevens/ABO/1000G_data/cram/"
