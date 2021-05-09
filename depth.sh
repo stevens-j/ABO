@@ -13,7 +13,7 @@ cramSuffix=".extract_for_bloodantigens-full_gene_master.cram"
 # path to output directory
 depthOutPath="/Users/jonathan_stevens/ABO/1000G_data/depth/"
 # output file extension
-outSuffix="_depth.txt"
+outSuffix="_ABO_pos_read_depth_of_coverage.txt"
 
 # create output directory
 mkdir -p $depthOutPath
