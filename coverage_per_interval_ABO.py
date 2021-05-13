@@ -37,7 +37,7 @@ def create_list_of_depth_files(text_file):
     """
     creates a list of file names from a text file
     :param text_file: str, name of text file containing file list
-    :return: list, list of file names
+    :return: file_list, list of file names
     """
     file_list = list()
     with open(text_file, 'r') as tf:
@@ -99,7 +99,7 @@ def _create_depth_intervals_list(sample_depth_list):
     """
     Splits the depth list into 100 element lists
     :param sample_depth_list: list of depth values
-    :return: list of 100 element lists
+    :return: depth_intervals_list, list of 100 element lists
     """
     depth_intervals_list = list()
     # divide list into 100 element lists
