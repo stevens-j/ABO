@@ -209,9 +209,9 @@ def get_cli_args():
     parser = argparse.ArgumentParser(
         description='Give base interval for copy number average')
     parser.add_argument('-s', dest='start', type=int,
-                        default=133264375, help='start position for interval')
+                        default=133279500, help='start position for interval')
     parser.add_argument('-i', dest='interval', type=int,
-                        default=1000, help='length of interval')
+                        default=5000, help='length of interval')
     parser.add_argument('-o', dest='outfile', type=str,
                         default='1000G_100bp_avg_copy_number.txt',
                         help='name of outfile')
