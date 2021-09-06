@@ -1,5 +1,5 @@
 #! /usr/bin/env python3
-# coverage.py
+# coverage_per_interval_ABO.py
 
 """
 Iterates through a list of previously generated samtools depth command files
@@ -7,6 +7,8 @@ to extract ABO gene sequence depth of coverage data, calculates average sample
 depth per 100 base intervals, and writes depth information for each sample per
 line in a text file.
 
+To run:
+python3 coverage_per_interval_ABO.py
 
 """
 
