@@ -11,10 +11,13 @@ usage: copy_number_per_interval.py [-h] [-s START] [-i INTERVAL] [-o OUTFILE]
 Give base interval for copy number average
 
 optional arguments:
-  -h, --help   show this help message and exit
-  -s START     start position for interval
-  -i INTERVAL  length of interval
-  -o OUTFILE   name of outfile
+  -h, --help            show this help message and exit
+  -s START, --start START
+                        start position for interval
+  -i INTERVAL, --interval INTERVAL
+                        length of interval
+  -o OUTFILE, --outfile OUTFILE
+                        name of outfile
 
 """
 
@@ -218,11 +221,11 @@ def get_cli_args():
     """
     parser = argparse.ArgumentParser(
         description='Give base interval for copy number average')
-    parser.add_argument('-s', dest='start', type=int,
+    parser.add_argument('-s', '--start', dest='start', type=int,
                         default=133279500, help='start position for interval')
-    parser.add_argument('-i', dest='interval', type=int,
+    parser.add_argument('-i', '--interval', dest='interval', type=int,
                         default=5000, help='length of interval')
-    parser.add_argument('-o', dest='outfile', type=str,
+    parser.add_argument('-o', '--outfile', dest='outfile', type=str,
                         default='1000G_100bp_avg_copy_number.txt',
                         help='name of outfile')
     return parser.parse_args()
