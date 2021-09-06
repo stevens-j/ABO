@@ -6,6 +6,16 @@ Iterates through a list of files to extract ABO gene sequence depth of
 coverage data, calculates gene copy number per 100 base interval, and writes
 copy number information for each sample per line in a text file.
 
+usage: copy_number_per_interval.py [-h] [-s START] [-i INTERVAL] [-o OUTFILE]
+
+Give base interval for copy number average
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -s START     start position for interval
+  -i INTERVAL  length of interval
+  -o OUTFILE   name of outfile
+
 """
 
 import argparse
@@ -14,7 +24,7 @@ import os
 
 def main():
     args = get_cli_args()
-    # convert start position to list index number
+    # convert start position to list index
     start = abs(133255176 - args.start)
     interval = args.interval
     outfile = args.outfile
